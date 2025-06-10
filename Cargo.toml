@@ -4,10 +4,13 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-cortex-m = "0.7.7"
-cortex-m-rt = "0.7.3"
 embedded-hal = "1.0.0"
+cortex-m-rt = "0.7.3"
+{% if abs_layer == "BSP" -%}
 microbit-v2 = "0.15.0"
+{% endif %}
+{% if abs_layer == "HAL" -%}
 nrf52833-hal = "0.18.0"
-nrf52833-pac = "0.12.2"
-# panic-halt = "0.2.0"
+{% endif %}
+# nrf52833-pac = "0.12.2"
+# cortex-m = "0.7.7"
