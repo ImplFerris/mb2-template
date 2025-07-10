@@ -1,2 +1,2 @@
 file::delete(".vscode");
-file::delete("cargo-generate")
+file::delete("cargo-generate");

@@ -5,8 +5,13 @@ description = "A Microbit project template"
 [hooks]
 pre = ["cargo-generate/prehook.rhai"]
 
+[placeholders.use_embassy]
+type = "bool"
+prompt = "Use Embassy (async)?"
+default = true
+
 [placeholders.abs_layer]
 type = "string"
-prompt = "BSP or HAL?"
+prompt = "Choose layer:"
 choices = ["BSP", "HAL"]
 default = "BSP"
